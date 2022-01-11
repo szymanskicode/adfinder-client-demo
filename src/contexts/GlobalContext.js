@@ -14,6 +14,8 @@ const GlobalContextProvider = (props) => {
     loadingUser: true,
   });
 
+  const url = (process.env.API_URL || '') + '/api/users/isauth'
+
   // LOADERS
   useEffect(() => {
     if (!loaders.loadingUser) {
@@ -31,7 +33,7 @@ const GlobalContextProvider = (props) => {
       return new Promise((resolve) => {
         const token = Cookies.get('token');
 
-        fetch('/api/users/isauth', {
+        fetch(url, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
