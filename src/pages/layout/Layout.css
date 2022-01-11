@@ -1,0 +1,52 @@
+.color-bar {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 125px;
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary);
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 0 1px 1px rgb(0 0 0 / 20%),
+    0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+#page-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+  margin-top: -125px;
+}
+
+#page-wrapper .content-wrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  gap: 15px;
+  transition: width 0.2s linear 0s;
+  padding-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  body.sidemenu #page-wrapper .content-wrapper {
+    width: calc(100% - 250px);
+  }
+}
+
+#page-wrapper .content-wrapper section {
+  flex-grow: 1;
+  background-color: var(--bg-light);
+  border: 1px solid transparent;
+  border-color: var(--border);
+  border-radius: 5px;
+  padding: 30px 15px;
+  -webkit-box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.15);
+}
+
+#page-wrapper .content-wrapper aside {
+  width: 250px;
+  padding-top: 60px;
+  display: none;
+}

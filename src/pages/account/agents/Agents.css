@@ -1,0 +1,60 @@
+.agent-username {
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+.agent-email {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.agent-phone {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.agents-list-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.agent-card h2 i,
+.agent-card p i {
+  display: inline-block;
+  min-width: 25px;
+}
+
+.agent-card {
+  position: relative;
+}
+
+.agent-card-actions {
+  position: absolute;
+  display: flex;
+  top: 5px;
+  right: 5px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.agent-card-action {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.agent-card-action:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.agent-card-action:hover.danger {
+  color: var(--danger);
+}

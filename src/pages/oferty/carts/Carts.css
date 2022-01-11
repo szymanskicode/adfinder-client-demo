@@ -1,0 +1,164 @@
+.cart-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px !important;
+  margin-bottom: 30px;
+}
+
+.cart-wrapper:last-child {
+  margin-bottom: 0px;
+}
+
+.cart-inner {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--bg-main);
+}
+
+.cart-image-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 30px;
+  width: 100px;
+}
+
+.cart-image .btn-sm {
+  transform: scale(0.85);
+}
+
+.cart {
+  flex-grow: 1;
+}
+
+.cart-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-title {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px 0 10px;
+}
+
+.cart-description {
+  font-size: 16px;
+  padding: 0 10px 5px 10px;
+}
+
+.cart-title i,
+.cart-description i {
+  font-size: 14px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.cart-title i:hover,
+.cart-description i:hover {
+  opacity: 1;
+}
+
+.cart-content {
+  padding: 5px 10px 8px 10px;
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border);
+  padding: 10px;
+}
+
+.cart-item:last-child {
+  margin-bottom: 0px;
+}
+
+.cart-content {
+  margin-bottom: none !important;
+}
+
+.cart-item-data {
+  flex-grow: 1;
+}
+
+.cart-item-action {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px 0 10px;
+}
+
+.cart-item-action .btn-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0px;
+  font-size: 22px;
+  border: none;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+.cart-item-action .btn-sm:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-action .btn-outline-primary {
+  font-size: 16px;
+  color: var(--primary) !important;
+}
+
+.cart-item-action .btn-outline-danger {
+  color: var(--danger) !important;
+}
+
+.cart-item-label {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-lighten-2);
+}
+
+.input-edit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px !important;
+  width: 29px;
+  height: 29px;
+  cursor: pointer;
+}
+
+.input-edit-button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 50% !important;
+}
+
+.input-edit-button:hover.confirm i {
+  background-color: rgb(197, 243, 197);
+}
+
+.input-edit-button:hover.cancel i {
+  background-color: rgb(243, 197, 197);
+}

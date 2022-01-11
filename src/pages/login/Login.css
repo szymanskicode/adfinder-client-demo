@@ -1,0 +1,90 @@
+#login .left-column {
+  display: none;
+}
+
+#login .right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  #login .left-column {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 40%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: center center no-repeat;
+    background-size: cover;
+  }
+
+  #login .right-column {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+#login .security-info-box {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--bg-main);
+  position: relative;
+  bottom: 100px;
+}
+
+#login .form-wrapper {
+  margin: 30px;
+  width: 100%;
+  max-width: 550px;
+}
+
+#login section {
+  border: 1px solid var(--border);
+  color: rgba(0, 0, 0, 0.57);
+  background-color: var(--bg-light);
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+#login .form-header {
+  background: var(--primary);
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-contrast);
+  font-weight: bold;
+  font-size: 125%;
+  display: flex;
+  align-items: center;
+}
+
+#login .form-content {
+  padding: 50px 15px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+#login .forget-password {
+  display: block;
+  background: var(--bg-main);
+  text-align: center;
+  padding: 20px 10px;
+}
+
+#login .btnBack {
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+#login .btnBack:hover {
+  filter: brightness(95%);
+}

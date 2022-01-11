@@ -1,0 +1,32 @@
+#error404-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+#error404-screen .error-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#error404-screen h1 {
+  margin: 0px;
+  font-size: 40px;
+  border-right: 1px solid;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+#error404-screen p {
+  margin: 0;
+  padding: 0;
+}

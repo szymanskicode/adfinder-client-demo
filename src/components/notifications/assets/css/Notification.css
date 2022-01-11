@@ -1,0 +1,131 @@
+.notification-wrapper {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 9999;
+}
+
+.notification-item {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 2px;
+  font-size: 90%;
+  line-height: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 20px;
+  animation: SlideLeft 0.5s;
+  animation-fill-mode: forwards;
+  width: 300px;
+}
+
+.notification-item .notification-flex {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.notification-item .notification-msg {
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+.notification-item .notification-close {
+  padding: 0 15px 0 0;
+}
+
+.notification-item .notification-close span {
+  font-size: 14px;
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.notification-item .notification-close span:hover {
+  opacity: 1;
+}
+
+.notification-item .notification-close svg {
+  fill: #fff;
+  width: 12px;
+  height: 12px;
+}
+
+.notification-item.success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.notification-item.success:hover {
+  background-color: #218838;
+}
+
+.notification-item.warning {
+  background-color: #ffc107;
+  color: #343a40;
+}
+
+.notification-item.warning:hover {
+  background-color: #e0a800;
+}
+
+.notification-item.danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.notification-item.danger:hover {
+  background-color: #c82333;
+}
+
+.notification-item.info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.notification-item.info:hover {
+  background-color: #138496;
+}
+
+.notification-item.dark {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.notification-item.dark:hover {
+  background-color: #303030;
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes SlideRight {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
+}
+
+.notification-item.exit {
+  animation: SlideRight 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.notification-item p {
+  margin: 0;
+  padding: 10px;
+}
+
+.notification-item .bar {
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.25);
+}

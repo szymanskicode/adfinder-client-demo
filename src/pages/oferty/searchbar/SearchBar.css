@@ -1,0 +1,80 @@
+#search-form {
+  background-color: var(--bg-main);
+  border: 3px solid var(--border);
+  padding: 15px;
+}
+
+#search-form .form-control,
+#search-form .form-select {
+  padding: 5px 10px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+
+#search-form .form-check-label {
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-lighten-1);
+}
+
+#search-form .form-label {
+  color: var(--text-lighten-1);
+}
+
+#search-form .form-check-input[type='checkbox'] {
+  border-radius: 0px;
+}
+
+#search-form .input-group-text {
+  border: none;
+  border-bottom: 1px solid var(--border-darken-1);
+  border-radius: 0;
+  padding: 5px 10px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+  color: var(--text-lighten-1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#search-form .date-custom .input-group-text {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  background-color: transparent !important;
+}
+
+#search-form .date-custom input {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+#search-form .react-datepicker-wrapper {
+  display: block;
+}
+
+#search-form .date-changer {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 4px;
+  border: 1px solid var(--link);
+  color: var(--link);
+  border-radius: 0px;
+  font-weight: 500;
+  line-height: 10px;
+  cursor: pointer;
+}
+
+#search-form .date-changer:hover {
+  border: 1px solid var(--link-hover);
+  color: var(--link-hover);
+}
+
+.date-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
