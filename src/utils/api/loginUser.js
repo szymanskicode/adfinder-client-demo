@@ -1,7 +1,7 @@
 import Cookies from 'js-cookie';
 
 export default async function loginUser(email, password, setters = {}) {
-  const url = (process.env.API_URL || '') + '/api/users/login';
+  const url = 'https://adfinder-server-demo.herokuapp.com/api/users/login';
   const data = { email, password };
   const { setIsWorking, setUser, setError } = setters;
 
