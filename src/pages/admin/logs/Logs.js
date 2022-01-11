@@ -36,7 +36,7 @@ const Logs = () => {
     return () => {
       clearInterval(iID);
     };
-  }, []);
+  }, [url]);
 
   return (
     <div>

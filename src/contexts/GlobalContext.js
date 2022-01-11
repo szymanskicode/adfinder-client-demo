@@ -14,7 +14,7 @@ const GlobalContextProvider = (props) => {
     loadingUser: true,
   });
 
-  const url = 'https://adfinder-server-demo.herokuapp.com/api/users/isauth'
+  const url = (process.env.REACT_APP_API_URL || '') + '/api/users/isauth'
 
   // LOADERS
   useEffect(() => {
