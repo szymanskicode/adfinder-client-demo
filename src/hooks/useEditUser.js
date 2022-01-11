@@ -16,7 +16,7 @@ export default function useEditUser() {
     const dataObj = props.data;
     const setIsWorking = props.setIsWorking;
 
-    const url = '/api/users/me';
+    const url = (process.env.API_URL || '') + '/api/users/me';
     const data = dataObj;
     setIsWorking(true);
     setEditError(null);

@@ -4,7 +4,7 @@ import saveLog from '../utils/saveLog';
 const useGetAds = () => {
   const getAds = (setAds, criteria = {}, setters = {}) => {
     setAds('fetching...');
-    let url = '/api/re_ads';
+    let url = (process.env.API_URL || '') + '/api/re_ads';
     const token = Cookies.get('token');
     const params = criteria; //object;
 

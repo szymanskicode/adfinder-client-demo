@@ -7,7 +7,7 @@ export default function useUpdateBadge() {
 
   // Fetch user
   const toggleBadge = (badgeName, adId) => {
-    const url = '/api/users/badge';
+    const url = (process.env.API_URL || '') + '/api/users/badge';
     const data = { adId, badgeName };
 
     fetch(url, {

@@ -4,10 +4,11 @@ import Cookies from 'js-cookie';
 export function createCart(data = {}, setters = {}) {
   const token = Cookies.get('token');
   const { setCarts, setError, setIsWorking, setSuccess } = setters;
+  const url = (process.env.API_URL || '') + '/api/carts'
 
   setIsWorking && setIsWorking(true);
 
-  fetch('/api/carts', {
+  fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -42,10 +43,11 @@ export function createCart(data = {}, setters = {}) {
 export function getCarts(setters = {}) {
   const token = Cookies.get('token');
   const { setCarts, setError, setIsLoading } = setters;
+  const url = (process.env.API_URL || '') + '/api/carts'
 
   setIsLoading && setIsLoading(true);
 
-  fetch('/api/carts', {
+  fetch(url, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -73,7 +75,7 @@ export function getCarts(setters = {}) {
 // DELETE CART
 export function deleteCart(cartId, setters = {}) {
   const token = Cookies.get('token');
-  const url = '/api/carts?cartId=' + cartId;
+  const url = (process.env.API_URL || '') + ('/api/carts?cartId=' + cartId);
   const { setCarts, setDeletedCart, setIsWorking, setError, setSuccess } =
     setters;
 
@@ -118,7 +120,7 @@ export function deleteCart(cartId, setters = {}) {
 // UPDATE CART
 export function updateCart(data, cartId, setters) {
   const token = Cookies.get('token');
-  const url = '/api/carts?cartId=' + cartId;
+  const url = (process.env.API_URL || '') + ('/api/carts?cartId=' + cartId);
   const {
     setCarts,
     setIsWorking,
@@ -174,7 +176,7 @@ export function updateCart(data, cartId, setters) {
 // TOGGLE CART ITEM
 export function toggleCartItem(adId, cartId, setters) {
   const token = Cookies.get('token');
-  const url = `/api/cart?cartId=${cartId}`;
+  const url = (process.env.API_URL || '') + `/api/cart?cartId=${cartId}`;
   const data = { adId };
   const { setCarts, setCartItems, setIsWorking, setError, Toast } = setters;
 
