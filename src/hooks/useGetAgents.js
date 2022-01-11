@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 const useGetAgents = () => {
   const getAgents = (props) => {
     const { setAgents, setError } = props.setters;
-    let url = (process.env.API_URL || '') + '/api/agents';
+    let url = (process.env.REACT_APP_API_URL || '') + '/api/agents';
     const token = Cookies.get('token');
 
     fetch(url, {

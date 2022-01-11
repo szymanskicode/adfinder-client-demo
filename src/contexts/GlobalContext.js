@@ -83,7 +83,7 @@ const GlobalContextProvider = (props) => {
     }
 
     initializeUser();
-  }, []);
+  }, [url]);
 
   return (
     <GlobalContext.Provider value={{ state, setState }}>

@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 export default function useEditAgent() {
   const editAgent = (props) => {
-    const url = (process.env.API_URL || '') + '/api/agent';
+    const url = (process.env.REACT_APP_API_URL || '') + '/api/agent';
     const token = Cookies.get('token');
     const { data, setters } = props;
     const { setIsWorking, setError, setSuccess, setAgents } = setters;

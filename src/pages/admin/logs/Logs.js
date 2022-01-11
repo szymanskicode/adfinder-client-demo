@@ -5,7 +5,7 @@ import './Logs.css';
 
 const Logs = () => {
   const [logs, setLogs] = useState([]);
-  const url = (process.env.API_URL || '') + '/api/admin/logs'
+  const url = (process.env.REACT_APP_API_URL || '') + '/api/admin/logs'
 
   useEffect(() => {
     const iID = setInterval(() => {

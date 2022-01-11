@@ -1,6 +1,6 @@
 export default function useCreateAgent() {
   const createAgent = (props) => {
-    const url = (process.env.API_URL || '') + '/api/users';
+    const url = (process.env.REACT_APP_API_URL || '') + '/api/users';
     const { data, setters } = props;
     const { setIsWorking, setError, setSuccess, setAgents } = setters;
 

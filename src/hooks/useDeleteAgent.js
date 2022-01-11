@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 export default function useDeleteAgent() {
   const deleteAgent = (props) => {
-    const url = (process.env.API_URL || '') + '/api/agents';
+    const url = (process.env.REACT_APP_API_URL || '') + '/api/agents';
     const token = Cookies.get('token');
     const { data, setters } = props;
     const { setIsWorking, setError, setSuccess, setDeletedAgent } = setters;

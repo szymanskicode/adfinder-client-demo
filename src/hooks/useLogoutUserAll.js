@@ -8,7 +8,7 @@ export default function useLogoutUserAll() {
 
   // Logout user from all devices
   const logoutUserAll = async () => {
-    const url = (process.env.API_URL || '') + '/api/users/logoutAll';
+    const url = (process.env.REACT_APP_API_URL || '') + '/api/users/logoutAll';
     const token = await Cookies.get('token');
 
     await fetch(url, {
