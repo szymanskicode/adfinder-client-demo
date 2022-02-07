@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useGetGlobalState } from '../../../contexts/GlobalContext';
-import useGetAgents from '../../../hooks/useGetAgents';
+import { useState, useEffect } from "react";
+import { useGetGlobalState } from "../../../contexts/GlobalContext";
+import useGetAgents from "../../../hooks/useGetAgents";
 
 const AssignAgentWidget = () => {
   const { user } = useGetGlobalState();
@@ -9,7 +9,7 @@ const AssignAgentWidget = () => {
   // Local State
   const [agents, setAgents] = useState([]);
   const [error, setError] = useState(null);
-  const [selectValue, setSelectValue] = useState('select');
+  const [selectValue, setSelectValue] = useState("select");
 
   // Get list of agents
   useEffect(() => {
@@ -23,41 +23,41 @@ const AssignAgentWidget = () => {
 
   const handleAssignAd = (e) => {
     e.preventDefault();
-    console.log(selectValue);
+    alert("Funkcjonalość niedostępna w wersji demonstracyjnej.");
   };
 
   return (
     <>
-      {user.role === 'AccountOwner' && !error ? (
-        <div className='modal-widget'>
-          <div className='modal-widget-header'>Przydziel ofertę agentowi</div>
-          <div className='modal-widget-body'>
+      {user.role === "AccountOwner" && !error ? (
+        <div className="modal-widget">
+          <div className="modal-widget-header">Przydziel ofertę agentowi</div>
+          <div className="modal-widget-body">
             {/* Add to busket form  */}
             <form
               onSubmit={(e) => handleAssignAd(e)}
-              className='row g-3 align-items-center'
+              className="row g-3 align-items-center"
             >
-              <div className='col-12'>
+              <div className="col-12">
                 <label
-                  className='visually-hidden'
+                  className="visually-hidden"
                   // htmlFor='inlineFormInputGroupUsername'
                 >
                   Username
                 </label>
-                <div className='input-group'>
-                  <div className='input-group-text widget-group-icon'>
-                    <i className='bi-file-person-fill'></i>
+                <div className="input-group">
+                  <div className="input-group-text widget-group-icon">
+                    <i className="bi-file-person-fill"></i>
                   </div>
                   <select
-                    className='form-select'
+                    className="form-select"
                     // id='inlineFormSelectPref'
                     value={selectValue}
                     onChange={(e) => setSelectValue(e.target.value)}
                   >
                     {agents.map((agent) => {
-                      if (agent.role === 'AccountOwner') {
+                      if (agent.role === "AccountOwner") {
                         return (
-                          <option key={agent._id} value='select'>
+                          <option key={agent._id} value="select">
                             Wybierz...
                           </option>
                         );
@@ -69,7 +69,7 @@ const AssignAgentWidget = () => {
                       );
                     })}
                   </select>
-                  <button type='submit' className='btn btn-primary'>
+                  <button type="submit" className="btn btn-primary">
                     OK
                   </button>
                 </div>

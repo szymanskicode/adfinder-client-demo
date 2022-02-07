@@ -367,6 +367,7 @@
 }
 
 @media (min-width: 992px) {
+
   .modal.modal-detiles .modal-lg,
   .modal.modal-detiles .modal-xl {
     max-width: 800px;
@@ -505,6 +506,16 @@
 #assigned .tab-nav-wrapper li.active {
   font-weight: 700;
   border-bottom: 2px solid var(--text);
+}
+
+#assigned .status-info {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: var(--text-lighten-1);
+  padding: 5px;
+  margin-top: 15px;
+  border: 1px solid var(--border);
 }
 
 .assigned-list-item {

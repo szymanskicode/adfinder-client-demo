@@ -1,36 +1,36 @@
-import { useState, useEffect } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { useGetGlobalState } from './contexts/GlobalContext';
+import { useState, useEffect } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { useGetGlobalState } from "./contexts/GlobalContext";
 
 // Components
-import Loading from './pages/loading/Loading';
-import Maintenance from './pages/maintenance/Maintenance';
-import Login from './pages/login/Login';
-import Navbar from './components/navbar/Navbar';
-import Sidemenu from './components/sidemenu/Sidemenu';
-import Dashboard from './pages/dashboard/Dashboard';
-import Explore from './pages/oferty/explore/Explore';
-import Ad from './pages/oferty/ad/Ad';
-import Observed from './pages/oferty/observed/Observed';
-import Carts from './pages/oferty/carts/Carts';
-import Assigned from './pages/oferty/assigned/Assigned';
-import Stats from './pages/oferty/stats/Stats';
-import AddAd from './pages/oferty/addAd/AddAd';
-import Mydata from './pages/account/mydata/Mydata';
-import Agents from './pages/account/agents/Agents';
-import Payments from './pages/account/payments/Payments';
-import Logs from './pages/account/logs/Logs';
-import Layout from './pages/layout/Layout';
-import Informator from './pages/informator/Informator';
-import Settings from './pages/settings/Settings';
-import Contact from './pages/contact/Contact';
-import AdminLogs from './pages/admin/logs/Logs';
-import Error404 from './pages/error404/Error404';
+import Loading from "./pages/loading/Loading";
+import Maintenance from "./pages/maintenance/Maintenance";
+import Login from "./pages/login/Login";
+import Navbar from "./components/navbar/Navbar";
+import Sidemenu from "./components/sidemenu/Sidemenu";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Explore from "./pages/oferty/explore/Explore";
+import Ad from "./pages/oferty/ad/Ad";
+import Observed from "./pages/oferty/observed/Observed";
+import Carts from "./pages/oferty/carts/Carts";
+import Assigned from "./pages/oferty/assigned/Assigned";
+import Stats from "./pages/oferty/stats/Stats";
+import AddAd from "./pages/oferty/addAd/AddAd";
+import Mydata from "./pages/account/mydata/Mydata";
+import Agents from "./pages/account/agents/Agents";
+import Payments from "./pages/account/payments/Payments";
+import Logs from "./pages/account/logs/Logs";
+import Layout from "./pages/layout/Layout";
+import Informator from "./pages/informator/Informator";
+import Settings from "./pages/settings/Settings";
+import Contact from "./pages/contact/Contact";
+import AdminLogs from "./pages/admin/logs/Logs";
+import Error404 from "./pages/error404/Error404";
 
 // CSS Styles
-import './App.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'react-datepicker/dist/react-datepicker.css';
+import "./App.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -66,7 +66,7 @@ function App() {
     return (
       <>
         <Switch>
-          <Route path='/' exact>
+          <Route path="/" exact>
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -74,7 +74,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/przegladaj/:page'>
+          <Route path="/oferty/przegladaj/:page">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -82,11 +82,11 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/przegladaj'>
-            <Redirect to='/oferty/przegladaj/1' />
+          <Route path="/oferty/przegladaj">
+            <Redirect to="/oferty/przegladaj/1" />
           </Route>
 
-          <Route path='/oferty/szczegoly/:id'>
+          <Route path="/oferty/szczegoly/:id">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -94,7 +94,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/obserwowane'>
+          <Route path="/oferty/obserwowane">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -102,7 +102,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/przydzielone'>
+          <Route path="/oferty/przydzielone">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -110,7 +110,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/statystyki'>
+          <Route path="/oferty/statystyki">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -118,7 +118,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/koszyki'>
+          <Route path="/oferty/koszyki">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -126,7 +126,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/oferty/dodaj'>
+          <Route path="/oferty/dodaj">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -134,7 +134,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/konto/mojedane'>
+          <Route path="/konto/mojedane">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -142,7 +142,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/konto/ustawienia'>
+          <Route path="/konto/ustawienia">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -150,7 +150,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/konto/agenci'>
+          <Route path="/konto/agenci">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -158,7 +158,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/konto/platnosci'>
+          <Route path="/konto/platnosci">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -166,7 +166,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/konto/logi'>
+          <Route path="/konto/logi">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -174,7 +174,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/contact'>
+          <Route path="/contact">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -182,7 +182,7 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/informator'>
+          <Route path="/informator">
             <Layout>
               <Navbar />
               <Sidemenu />
@@ -190,15 +190,15 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path='/admin/logs'>
+          <Route path="/admin/logs">
             <AdminLogs />
           </Route>
 
-          <Route path='/logowanie'>
+          <Route path="/logowanie">
             <Login />
           </Route>
 
-          <Route path='/'>
+          <Route path="/">
             <Error404 />
           </Route>
         </Switch>

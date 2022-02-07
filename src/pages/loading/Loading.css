@@ -1,5 +1,6 @@
 #loading-screen {
   position: fixed;
+  flex-direction: column;
   top: 0;
   bottom: 0;
   left: 0;
@@ -17,6 +18,7 @@
   width: 80px;
   height: 80px;
 }
+
 .ad-finder div {
   display: inline-block;
   position: absolute;
@@ -25,23 +27,28 @@
   background: var(--primary);
   animation: ad-finder 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
+
 .ad-finder div:nth-child(1) {
   left: 8px;
   animation-delay: -0.24s;
 }
+
 .ad-finder div:nth-child(2) {
   left: 32px;
   animation-delay: -0.12s;
 }
+
 .ad-finder div:nth-child(3) {
   left: 56px;
   animation-delay: 0;
 }
+
 @keyframes ad-finder {
   0% {
     top: 8px;
     height: 64px;
   }
+
   50%,
   100% {
     top: 24px;
@@ -56,6 +63,7 @@
   opacity: 0.75;
   color: var(--primary);
 }
+
 .loader-wrapper span {
   display: block;
   margin-top: -15px;
