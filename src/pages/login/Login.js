@@ -101,8 +101,7 @@ const Login = () => {
             <div style={{ marginLeft: "-30px" }}>
               <Demo
                 title="DEMO"
-                message="Dane logowania do konta demonstracyjnego: 
-                LOGIN: demo@example.com PASS: password "
+                message="Email: demo@example.com / Hasło: password"
               />
             </div>
           </div>
